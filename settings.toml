@@ -1,0 +1,20 @@
+[default]
+SQLALCHEMY_DATABASE_URI = 'sqlite:///pypoker.db'
+SQLALCHEMY_TRACK_MODIFICATIONS = 'FALSE'
+TITLE = 'PyPoker Agile'
+SECRET_KEY = ''
+EXTENSIONS = [
+    'pypokeragile.ext.appearance',
+    'pypokeragile.ext.database',
+    'pypokeragile.ext.migration',
+    'pypokeragile.ext.auth',
+    'pypokeragile.ext.admin',
+    'pypokeragile.ext.commands',
+    'pypokeragile.ext.socketio',
+    'pypokeragile.blueprints.views',
+    'pypokeragile.blueprints.restapi',
+    'pypokeragile.blueprints.events'
+]
+
+[production]
+SQLALCHEMY_DATABASE_URI = 'sqllite:///localdb.db'

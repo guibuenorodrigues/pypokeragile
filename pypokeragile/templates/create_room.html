@@ -1,0 +1,43 @@
+{%- extends "base.html" %}
+
+
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+        <h1>Create a room to play</h1>
+        <p>Note: Your data isn't going anywhere.</p>
+    </div>
+    <div class="col-md-12">
+        <form name="form_new_room" id="form_new_room">
+            <div class="form-group">
+                <label for="room_name">Room name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="room_name" aria-describedby="room_name_help" required
+                    minlength="3">
+                <small id="room_name_help" class="form-text text-muted">Define the name of your room.</small>
+            </div>
+            <div class="form-group">
+                <label for="owner_name">Your name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="owner_name" aria-describedby="owner_name_help" required
+                    minlength="3">
+                <small id="owner_name_help" class="form-text text-muted">Let the team know who you are.</small>
+            </div>
+            <div class="form-group">
+                <label for="owner_email">Email address</label>
+                <input type="owner_email" class="form-control" id="owner_email" aria-describedby="owner_email_help">
+                <small id="owner_email_help" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+            <div class="form-group">
+                <label for="room_password">Room password</label>
+                <input type="password" class="form-control" id="room_password" aria-describedby="room_password_help">
+                <small id="room_password_help" class="form-text text-muted">Define a password if you want to keep the
+                    room private</small>
+            </div>
+
+            <a class="btn btn-primary" id="btn_create" role="button" href="#"><b>CREATE</b></a>
+            <a class="btn btn-default" id="btn_cancel" role="button" href="/">Cancel</a>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/create_room.js') }}"></script>
+{%- endblock %}

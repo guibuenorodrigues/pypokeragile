@@ -1,0 +1,9 @@
+dynaconf
+Flask
+flask-restful
+flask-sqlalchemy
+sqlalchemy-serializer
+flask-bootstrap
+flask-socketio
+simple-websocket
+Flask-Migrate
